@@ -1,0 +1,520 @@
+#class_template FootPlateConditionalContact (BaseObjectPara, 
+TargetObject0 , TargetObject1,  TargetObject2,  TargetObject3,  TargetObject4, 
+TargetObject5 , TargetObject6,  TargetObject7,  TargetObject8,  TargetObject9,
+TargetObject10, TargetObject11, TargetObject12, TargetObject13, TargetObject14,
+TargetObject15, TargetObject16, TargetObject17, TargetObject18, TargetObject19,
+TargetObject20, TargetObject21, TargetObject22, TargetObject23, TargetObject24,
+TargetObject25,
+DisplayTriggerVolumePara, DisplayTargetNodePara,
+UserDefinedDistLimitLowPara,UserDefinedDistLimitHighPara,UserDefinedRadiusLimitPara, UserDefinedVelLimitHighPara,
+StrengthPara,StaticFrictionCoefficientPara,NormalDirectionPara, FrictionDirection1Para, FrictionDirection2Para,NormalDirectionParString)
+{
+  
+  //AnyVar NormForc = 0.4*Main.Studies.HumanModel.BodyModel.TotalBodyMass*vnorm(Main.Studies.InverseDynamicStudy.Gravity);
+  //AnyVar NormForcMidFoot = 0.4*Main.Studies.HumanModel.BodyModel.TotalBodyMass*vnorm(Main.Studies.InverseDynamicStudy.Gravity);
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact0 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject0,
+  DisplayTriggerVolume = DisplayTriggerVolumePara,
+  DisplayTargetNode =0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara;
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact1 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject1,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode =0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara;
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact2 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject2,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact3 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject3,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact4 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject4,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara;
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact5 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject5,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  }; 
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact6 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject6,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact7 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject7,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact8 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject8,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact9 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject9,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact10 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject10,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact11 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject11,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact12 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject12,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact13 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject13,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact14 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject14,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact15 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject15,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact16 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject16,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact17 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject17,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact18 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject18,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+
+  ConditionalContactDistanceAndVelocityDepClass Contact19 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject19,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+
+  ConditionalContactDistanceAndVelocityDepClass Contact20 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject20,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact21 (
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject21,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact22(
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject22,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact23(
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject23,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact24(
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject24,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  ConditionalContactDistanceAndVelocityDepClass Contact25(
+  BaseObject = BaseObjectPara,
+  TargetObject = TargetObject25,
+  DisplayTriggerVolume = 0,
+  DisplayTargetNode = 0
+  ) = {
+    UserDefinedDistLimitLow = UserDefinedDistLimitLowPara; 
+    UserDefinedDistLimitHigh = UserDefinedDistLimitHighPara;
+    UserDefinedRadiusLimit= UserDefinedRadiusLimitPara;
+    UserDefinedVelLimitHigh = UserDefinedVelLimitHighPara;
+    Strength = StrengthPara; 
+    StaticFrictionCoefficient = StaticFrictionCoefficientPara;
+    NormalDirection = NormalDirectionPara;
+    FrictionDirection1 = FrictionDirection1Para;
+    FrictionDirection2 = FrictionDirection2Para;
+  };  
+  
+  //-->Code for calculating COP
+  #include "FootPlateConditionalContact_ForceMomentMeasure_Auto.any"
+  
+  #include "FootPlateConditionalContact_ForceMomentMeasure_Manual.any"
+  
+  
+  AnyVar Fx = ForceMomentMeasure_Manual.Fx_On_Human;
+  AnyVar Fy = ForceMomentMeasure_Manual.Fy_On_Human;
+  AnyVar Fz = ForceMomentMeasure_Manual.Fz_On_Human;
+  AnyVar Mx = ForceMomentMeasure_Manual.Mx_On_Human;
+  AnyVar My = ForceMomentMeasure_Manual.My_On_Human;
+  AnyVar Mz = ForceMomentMeasure_Manual.Mz_On_Human;
+  
+  
+  #if NormalDirectionParString == "X"
+  AnyVar Fxx =iffun(gtfun(abs(Fx),0.0), Fx, Fx+1e10);
+  AnyVar Rx = 0;
+  AnyVar Ry = -Mz/Fxx;
+  AnyVar Rz = My/Fxx;  
+  AnyVar OnOff = iffun(gtfun(abs(Fx), 10.0), 1.0, 0.0);
+  #endif
+  
+  #if NormalDirectionParString == "Y"
+  AnyVar Fyy =iffun(gtfun(abs(Fy),0.0), Fy, Fy+1e10);
+  AnyVar Rx = Mz/Fyy;
+  AnyVar Ry = 0;
+  AnyVar Rz = -Mx/Fyy;
+  AnyVar OnOff = iffun(gtfun(abs(Fy), 10.0), 1.0, 0.0);
+  #endif    
+  
+  #if NormalDirectionParString == "Z"
+  AnyVar Fzz =iffun(gtfun(abs(Fz),0.0), Fz, Fz+1e10);
+  AnyVar Rx = -My/Fzz;
+  AnyVar Ry = Mx/Fzz;
+  AnyVar Rz = 0;
+  //AnySwitch OnOff = iffun(gtfun(abs(Fz), 10.0), 1, 0);
+  AnyIntVar OnOff = iffun(gtfun(abs(Fz), 10.0), 1, 0) ;
+  #endif
+  
+  AnyDrawLine GRF_line=
+  {
+    AnyRefFrame & ref = BaseObjectPara;
+    p0 = { .Rx, .Ry, .Rz};
+    p1 = p0 + 0.001 * {.Fx, .Fy, .Fz} ;
+    Line.Thickness = 0.01;
+    Line.RGB = {1, 0, 0};
+    GlobalCoord=Off;
+    //Visible = .OnOff_Val;
+    Opacity = .OnOff;
+  };
+  
+  AnyDrawSphere GRF_point = 
+  {
+    AnyRefFrame & ref = BaseObjectPara;
+    Position = ref.r + (ref.Axes*{.Rx, .Ry, .Rz}')';
+    RGB = {0, 1, 1};
+    ScaleXYZ = 0.015*{1, 1, 1};
+    GlobalCoord = On;    
+    //Visible = .OnOff_Val ;
+    Opacity = .OnOff;
+  };
+  //<--Code for calculationg COP
+};

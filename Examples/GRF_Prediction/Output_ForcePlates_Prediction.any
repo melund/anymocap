@@ -1,0 +1,55 @@
+AnyFolder Outputs = 
+{
+  AnyOutputFile ForcePlate1_Global = 
+  {
+    FileName = "..\Output\ForcePlate1_Prediction.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = -Main.EnvironmentModel.ConditionalContacts.Contact_Group1.ForceMomentMeasure_Auto.F;
+    AnyVec3 M = -Main.EnvironmentModel.ConditionalContacts.Contact_Group1.ForceMomentMeasure_Auto.M;
+  };
+  
+  AnyOutputFile ForcePlate2_Global = 
+  {
+    FileName = "..\Output\ForcePlate2_Prediction.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = -Main.EnvironmentModel.ConditionalContacts.Contact_Group2.ForceMomentMeasure_Auto.F;
+    AnyVec3 M = -Main.EnvironmentModel.ConditionalContacts.Contact_Group2.ForceMomentMeasure_Auto.M;
+  };
+  
+  AnyOutputFile ForcePlate3_Global = 
+  {
+    FileName = "..\Output\ForcePlate3_Prediction.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = -Main.EnvironmentModel.ConditionalContacts.Contact_Group3.ForceMomentMeasure_Auto.F;
+    AnyVec3 M = -Main.EnvironmentModel.ConditionalContacts.Contact_Group3.ForceMomentMeasure_Auto.M;
+    
+  };  
+  
+};

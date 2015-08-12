@@ -34,13 +34,13 @@ AnyFolder JointsAndDrivers = {
     AnyKinMeasureOrg &PelvisThoraxRotation = ...BodyModel.Interface.Trunk.PelvisThoraxRotation;
     #if BM_TRUNK == ON & BM_TRUNK_NECK == OFF
     AnyKinMeasureOrg &NeckExtension = ...BodyModel.Interface.Trunk.NeckJoint;
-    Reaction.Type={On,On,On,On,On,On,Off,Off,Off,Off};
+    Reaction.Type={Off,Off,Off,Off,Off,Off,Off,Off,Off,Off};
     #endif 
     #if BM_TRUNK_NECK == ON
     AnyKinMeasureOrg& SkullThoraxFlexion = ...BodyModel.Interface.Trunk.SkullThoraxFlexion;
     AnyKinMeasureOrg& SkullThoraxLateralBending = ...BodyModel.Interface.Trunk.SkullThoraxLateralBending;
     AnyKinMeasureOrg& SkullThoraxRotation = ...BodyModel.Interface.Trunk.SkullThoraxRotation; 
-    Reaction.Type={On,On,On,On,On,On,Off,Off,Off,Off,Off,Off};
+    Reaction.Type={Off,Off,Off,Off,Off,Off,Off,Off,Off,Off,Off,Off};
     #endif
   };
   

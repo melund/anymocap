@@ -1,0 +1,103 @@
+#ifdef CREATE_CC_NODE
+  #undef CREATE_CC_NODE
+#endif
+
+#define CREATE_CC_NODE(Matrix, Index) AnyRefNode Node##Index = { sRel = Matrix[Index]; AnyDrawNode Drw = { RGB = {1, 0, 1}; ScaleXYZ = 0.005*{1, 1, 1}; Opacity = 0.5;}; };
+
+AnyFolder CC_Node_Info = 
+{
+  AnyVec3 NewCoordSys_sRel = .HeelContactNodeLow.sRel;
+  AnyMat33 NewCoordSys_ARel = RotMat(.HeelContactNodeLow.sRel, .ToeMedialContactNode.sRel, .ToeLateralContactNode.sRel) * RotMat(-pi/2*.Sign, x);
+
+  AnyMat33 ProjectionMat = {{1, 0, 0}, {0, 0, 0}, {0, 0, 1}}; // Projection to XZ plane!
+  
+  #ifndef FOOT_CONTACT_POINTS_OFFSET
+    AnyVar Offset_Dist = DesignVar(0.0);
+  #else
+    AnyVar Offset_Dist = DesignVar( FOOT_CONTACT_POINTS_OFFSET );
+  #endif
+  
+  AnyVec3 Offset_Vec = {0, -1, 0};
+  
+  AnyFloat Sources = 
+  {
+    .HeelContactNodeLow.sRel, 
+    .ToeMedialContactNode.sRel, 
+    .ToeLateralContactNode.sRel, 
+    .BigToeNode.sRel,
+    .MedialMalleolus.sRel, 
+    .LateralMalleolus.sRel,
+    .GroundJoint.sRel,
+    .SubTalarJoint.sRel, 
+    .MetatarsalJoint1Node.sRel, 
+    .MetatarsalJoint2Node.sRel, 
+    .MetatarsalJoint3Node.sRel, 
+    .MetatarsalJoint4Node.sRel, 
+    .MetatarsalJoint5Node.sRel, 
+    .Scale((5*.StdPar.ToeMedialContactNode+5*.StdPar.BigToeNode)/10), 
+    .Scale((5*.StdPar.ToeLateralContactNode+5*.StdPar.BigToeNode)/10),
+    .Scale((5*.StdPar.HeelContactNodeLow+5*.StdPar.ToeMedialContactNode)/10), 
+    .Scale((2.5*.StdPar.HeelContactNodeLow+7.5*.StdPar.ToeMedialContactNode)/10), 
+    .Scale((5*.StdPar.HeelContactNodeLow+5*.StdPar.ToeLateralContactNode)/10), 
+    .Scale((2.5*.StdPar.HeelContactNodeLow+7.5*.StdPar.ToeLateralContactNode)/10), 
+    .Scale((7.5*.StdPar.HeelContactNodeLow+2.5*.StdPar.ToeLateralContactNode)/10), 
+    .Scale((8.5*.StdPar.HeelContactNodeLow+1.5*.StdPar.ToeLateralContactNode)/10), 
+    .Scale((-1.5*.StdPar.HeelContactNodeLow+11.5*.StdPar.ToeLateralContactNode)/10), 
+    .Scale((4*.StdPar.HeelContactNodeLow+6*.StdPar.BigToeNode)/10),
+    .FlexorHallucisLongusViaNode7.sRel, 
+    .FlexorDigitorumLongusViaNode8.sRel, 
+    .ExtensorDigitorumLongus1Node.sRel    
+  };
+  
+  AnyInt Sources_Sizes = SizesOf(Sources);
+  AnyFloat Unit_Array = iarr(1, Sources_Sizes[0])*0 + 1 ;
+  
+  AnyFloat Targets = 
+  ( Sources - (NewCoordSys_sRel'*{Unit_Array})')* NewCoordSys_ARel * ProjectionMat 
+  + (Offset_Dist*Offset_Vec'*{Unit_Array})';
+};
+
+AnyRefNode CC_Node_Base =
+{
+  sRel = .CC_Node_Info.NewCoordSys_sRel ;
+  ARel = .CC_Node_Info.NewCoordSys_ARel ;
+  
+  //AnyDrawRefFrame Drw = { RGB = {1, 1, 0}; ScaleXYZ = 0.25*{1, 1, 1};};
+  
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 0)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 1)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 2)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 3)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 4)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 5)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 6)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 7)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 8)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 9)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 10)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 11)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 12)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 13)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 14)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 15)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 16)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 17)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 18)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 19)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 20)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 21)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 22)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 23)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 24)
+  CREATE_CC_NODE(..CC_Node_Info.Targets, 25)
+//  CREATE_CC_NODE(..CCNode_Info.Targets, 26)
+//  CREATE_CC_NODE(..CCNode_Info.Targets, 27)
+//  CREATE_CC_NODE(..CCNode_Info.Targets, 28)
+//  CREATE_CC_NODE(..CCNode_Info.Targets, 29)
+//  CREATE_CC_NODE(..CCNode_Info.Targets, 30)
+};
+
+#undef CREATE_CC_NODE
+
+
+

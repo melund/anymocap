@@ -1,0 +1,17 @@
+AnyFolder HumanReferences = 
+{
+  AnyFolder& Ref_HumanModel = .HumanModel;
+  
+  AnySeg& Ref_Foot_Right = Ref_HumanModel.BodyModel.Right.Leg.Seg.Foot ;
+  AnySeg& Ref_Foot_Left  = Ref_HumanModel.BodyModel.Left.Leg.Seg.Foot ;
+  
+  Ref_Foot_Right =
+  {
+    #include "CC_Nodes_Foot.any"
+  };
+  
+  Ref_Foot_Left = 
+  {
+    #include "CC_Nodes_Foot.any"
+  };  
+};

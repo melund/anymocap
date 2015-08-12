@@ -1,0 +1,120 @@
+ //--> For Pelvis Residual Forces and Torques
+AnyFolder PelvisResiduals =
+{
+  #ifndef USE_GRF_PREDICTION
+  
+  AnyReacForce ReacForce = 
+  {
+    AnyKinMeasureOrg &ref0= ...BodyModel.Interface.Trunk.PelvisPosX;
+    AnyKinMeasureOrg &ref1 = ...BodyModel.Interface.Trunk.PelvisPosY;
+    AnyKinMeasureOrg &ref2 = ...BodyModel.Interface.Trunk.PelvisPosZ;
+    AnyKinMeasureOrg &ref3 = ...BodyModel.Interface.Trunk.PelvisRotX;
+    AnyKinMeasureOrg &ref4 = ...BodyModel.Interface.Trunk.PelvisRotY;
+    AnyKinMeasureOrg &ref5 = ...BodyModel.Interface.Trunk.PelvisRotZ;
+  };
+  AnyVar PosX_Force = ReacForce.Fout[0];
+  AnyVar PosY_Force = ReacForce.Fout[1];
+  AnyVar PosZ_Force = ReacForce.Fout[2];
+  AnyVar RotX_Torque = ReacForce.Fout[3];
+  AnyVar RotY_Torque = ReacForce.Fout[4];
+  AnyVar RotZ_Torque = ReacForce.Fout[5];  
+  
+  #else
+  
+  AnyMuscleModel MusMoldel1 =
+  {
+    F0 = 10;
+  };
+  AnyMuscleModel MusMoldel2 =
+  {
+    F0 = 10;
+  };
+  // For PosX
+  AnyGeneralMuscle PosX_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosX;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle PosX_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosX;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = -1;
+  };   
+  // For PosY
+  AnyGeneralMuscle PosY_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosY;
+    AnyMuscleModel & mus = .MusMoldel2;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle PosY_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosY;
+    AnyMuscleModel & mus = .MusMoldel2;
+    ForceDirection = -1;
+  };    
+  // For PosZ
+  AnyGeneralMuscle PosZ_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosZ;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle PosZ_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisPosZ;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = -1;
+  };    
+  // For RotX
+  AnyGeneralMuscle RotX_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotX;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle RotX_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotX;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = -1;
+  };    
+  // For RotY
+  AnyGeneralMuscle RotY_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotY;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle RotY_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotY;
+    AnyMuscleModel & mus = .MusMoldel1;
+    ForceDirection = -1;
+  };    
+  // For RotZ
+  AnyGeneralMuscle RotZ_Push=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotZ;
+    AnyMuscleModel & mus = .MusMoldel2;
+    ForceDirection = 1;
+  };
+  AnyGeneralMuscle RotZ_Pull=
+  {
+    AnyKinMeasureOrg & jnt = ...BodyModel.Interface.Trunk.PelvisRotZ;
+    AnyMuscleModel & mus = .MusMoldel2;
+    ForceDirection = -1;
+  }; 
+
+  AnyVar PosX_Force = PosX_Push.Fout[0] + PosX_Pull.Fout[0];
+  AnyVar PosY_Force = PosY_Push.Fout[0] + PosY_Pull.Fout[0];
+  AnyVar PosZ_Force = PosZ_Push.Fout[0] + PosZ_Pull.Fout[0];
+  AnyVar RotX_Torque = RotX_Push.Fout[0] + RotX_Pull.Fout[0];
+  AnyVar RotY_Torque = RotY_Push.Fout[0] + RotY_Pull.Fout[0];
+  AnyVar RotZ_Torque = RotZ_Push.Fout[0] + RotZ_Pull.Fout[0];
+  
+  #endif
+};
+//<-- For Pelvis Residual Forces and Torques

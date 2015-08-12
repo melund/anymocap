@@ -1,0 +1,120 @@
+////**************************** CONDITIONAL CONTACTS ****************************//// 
+AnyFolder ConditionalContacts = 
+{
+  
+  AnyFolder Settings = 
+  {
+    AnyVar LimitDistLow = -0.10;
+    AnyVar LimitDistHigh = 0.04;
+    AnyVar LimitVelHigh = 0.8;
+    AnyVar Radius = 10;
+    AnyVar Strength = 0.4*Main.HumanModel.BodyModel.TotalBodyMass*vnorm(Main.Studies.InverseDynamicStudy.Gravity);
+    AnyVar FrictionCoefficient = 0.5;
+    AnyVar ScaleFactor = 1;
+    AnyIntArray Direction = {1,0,2};
+    
+    #define ForcePlateDirectionNormal Z 
+    #define NormalDirectionParStringIn "Z"
+    
+    #define ForcePlateDirectionFriction1 X 
+    #define ForcePlateDirectionFriction2 Y
+        
+    AnyVar ForceVectorDrawScaleFactor = 0.0005;
+    
+    AnyRefFrame& ForcePlate1 = ..GlobalRef.Plate.CC_Base;
+    AnyRefFrame& ForcePlate2 = ..GlobalRef.Plate.CC_Base;
+    
+    AnyFolder& CC_Node_Foot_Right = Main.HumanReferences.Ref_Foot_Right.CC_Node_Base;
+    AnyFolder& CC_Node_Foot_Left  = Main.HumanReferences.Ref_Foot_Left.CC_Node_Base;
+  };
+  
+
+  FootPlateConditionalContact Contact_Group_Right (
+  BaseObjectPara = ..Settings.ForcePlate1,
+  TargetObject0= ..Settings.CC_Node_Foot_Right.Node0,
+  TargetObject1= ..Settings.CC_Node_Foot_Right.Node1,
+  TargetObject2= ..Settings.CC_Node_Foot_Right.Node2,
+  TargetObject3= ..Settings.CC_Node_Foot_Right.Node3,
+  TargetObject4= ..Settings.CC_Node_Foot_Right.Node4,
+  TargetObject5= ..Settings.CC_Node_Foot_Right.Node5,
+  TargetObject6= ..Settings.CC_Node_Foot_Right.Node6,
+  TargetObject7= ..Settings.CC_Node_Foot_Right.Node7,
+  TargetObject8= ..Settings.CC_Node_Foot_Right.Node8,
+  TargetObject9= ..Settings.CC_Node_Foot_Right.Node9,
+  TargetObject10= ..Settings.CC_Node_Foot_Right.Node10,
+  TargetObject11= ..Settings.CC_Node_Foot_Right.Node11,
+  TargetObject12= ..Settings.CC_Node_Foot_Right.Node12,
+  TargetObject13= ..Settings.CC_Node_Foot_Right.Node13,
+  TargetObject14= ..Settings.CC_Node_Foot_Right.Node14,
+  TargetObject15= ..Settings.CC_Node_Foot_Right.Node15,
+  TargetObject16= ..Settings.CC_Node_Foot_Right.Node16,
+  TargetObject17= ..Settings.CC_Node_Foot_Right.Node17,
+  TargetObject18= ..Settings.CC_Node_Foot_Right.Node18,
+  TargetObject19= ..Settings.CC_Node_Foot_Right.Node19,
+  TargetObject20= ..Settings.CC_Node_Foot_Right.Node20,
+  TargetObject21= ..Settings.CC_Node_Foot_Right.Node21,
+  TargetObject22= ..Settings.CC_Node_Foot_Right.Node22,
+  TargetObject23= ..Settings.CC_Node_Foot_Right.Node23,
+  TargetObject24= ..Settings.CC_Node_Foot_Right.Node24,
+  TargetObject25= ..Settings.CC_Node_Foot_Right.Node25,
+  
+  DisplayTriggerVolumePara =1,
+  DisplayTargetNodePara =1,
+  UserDefinedDistLimitLowPara = ..Settings.LimitDistLow,
+  UserDefinedDistLimitHighPara = ..Settings.LimitDistHigh,
+  UserDefinedRadiusLimitPara = ..Settings.Radius,
+  UserDefinedVelLimitHighPara = ..Settings.LimitVelHigh,
+  StrengthPara = ..Settings.Strength,
+  StaticFrictionCoefficientPara = ..Settings.FrictionCoefficient,
+  NormalDirectionPara = ForcePlateDirectionNormal,
+  FrictionDirection1Para = ForcePlateDirectionFriction1,
+  FrictionDirection2Para = ForcePlateDirectionFriction2,
+  NormalDirectionParString = NormalDirectionParStringIn
+  ) = {};
+
+  FootPlateConditionalContact Contact_Group_left (
+  BaseObjectPara = ..Settings.ForcePlate2,
+  TargetObject0= ..Settings.CC_Node_Foot_Left.Node0,
+  TargetObject1= ..Settings.CC_Node_Foot_Left.Node1,
+  TargetObject2= ..Settings.CC_Node_Foot_Left.Node2,
+  TargetObject3= ..Settings.CC_Node_Foot_Left.Node3,
+  TargetObject4= ..Settings.CC_Node_Foot_Left.Node4,
+  TargetObject5= ..Settings.CC_Node_Foot_Left.Node5,
+  TargetObject6= ..Settings.CC_Node_Foot_Left.Node6,
+  TargetObject7= ..Settings.CC_Node_Foot_Left.Node7,
+  TargetObject8= ..Settings.CC_Node_Foot_Left.Node8,
+  TargetObject9= ..Settings.CC_Node_Foot_Left.Node9,
+  TargetObject10= ..Settings.CC_Node_Foot_Left.Node10,
+  TargetObject11= ..Settings.CC_Node_Foot_Left.Node11,
+  TargetObject12= ..Settings.CC_Node_Foot_Left.Node12,
+  TargetObject13= ..Settings.CC_Node_Foot_Left.Node13,
+  TargetObject14= ..Settings.CC_Node_Foot_Left.Node14,
+  TargetObject15= ..Settings.CC_Node_Foot_Left.Node15,
+  TargetObject16= ..Settings.CC_Node_Foot_Left.Node16,
+  TargetObject17= ..Settings.CC_Node_Foot_Left.Node17,
+  TargetObject18= ..Settings.CC_Node_Foot_Left.Node18,
+  TargetObject19= ..Settings.CC_Node_Foot_Left.Node19,
+  TargetObject20= ..Settings.CC_Node_Foot_Left.Node20,
+  TargetObject21= ..Settings.CC_Node_Foot_Left.Node21,
+  TargetObject22= ..Settings.CC_Node_Foot_Left.Node22,
+  TargetObject23= ..Settings.CC_Node_Foot_Left.Node23,
+  TargetObject24= ..Settings.CC_Node_Foot_Left.Node24,
+  TargetObject25= ..Settings.CC_Node_Foot_Left.Node25,
+  
+  DisplayTriggerVolumePara =0,
+  DisplayTargetNodePara =0,
+  UserDefinedDistLimitLowPara = ..Settings.LimitDistLow,
+  UserDefinedDistLimitHighPara = ..Settings.LimitDistHigh,
+  UserDefinedRadiusLimitPara = ..Settings.Radius,
+  UserDefinedVelLimitHighPara = ..Settings.LimitVelHigh,
+  StrengthPara = ..Settings.Strength,
+  StaticFrictionCoefficientPara = ..Settings.FrictionCoefficient,
+  NormalDirectionPara = ForcePlateDirectionNormal,
+  FrictionDirection1Para = ForcePlateDirectionFriction1,
+  FrictionDirection2Para = ForcePlateDirectionFriction2,
+  NormalDirectionParString = NormalDirectionParStringIn
+  ) = {};
+
+};
+
+

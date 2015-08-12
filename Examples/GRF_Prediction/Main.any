@@ -1,0 +1,45 @@
+//-->classes
+#include "Class\ConditionalContactDistanceAndVelocityDepClass.any"
+#include "Class\FootPlateConditionalContact.any"
+//<--
+
+//-->defines
+#define USE_GRF_PREDICTION
+#ifdef USE_GRF_PREDICTION
+  #define EXCLUDE_FORCE_PLATES
+#endif
+//<--
+
+//-->paths
+#path MOCAP_TRIAL_SPECIFIC_DATA "TrialSpecificData.any"
+#path MOCAP_SUBJECT_SPECIFIC_DATA "SubjectSpecificData.any"
+#path MOCAP_LAB_SPECIFIC_DATA "LabSpecificData.any"
+//<--
+
+//-->AnyMocap
+#include "LoadAnyMocap.any"
+//<--
+
+//-->Additional
+Main =
+{
+  #ifdef USE_GRF_PREDICTION
+   #include "HumanReferences.any"  
+   EnvironmentModel = 
+   {
+     #include "GRF_Plates.any"
+     #include "ConditionalContacts.any"
+   };
+  #endif
+  
+  Studies.InverseDynamicStudy.ModelEnvironmentConnection = 
+  {
+    #include "PelvisResiduals.any"
+  };
+  
+  
+};
+//<--
+
+
+

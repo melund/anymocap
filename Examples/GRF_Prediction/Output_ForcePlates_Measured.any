@@ -1,0 +1,55 @@
+AnyFolder Outputs = 
+{
+  AnyOutputFile ForcePlate1_Global = 
+  {
+    FileName = "..\Output\ForcePlate1_Measured.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = Main.EnvironmentModel.Plate1.CenterOfPressure.NetEffectMeasure.F;
+    AnyVec3 M = Main.EnvironmentModel.Plate1.CenterOfPressure.NetEffectMeasure.M;
+  };
+  
+  AnyOutputFile ForcePlate2_Global = 
+  {
+    FileName = "..\Output\ForcePlate2_Measured.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = Main.EnvironmentModel.Plate2.CenterOfPressure.NetEffectMeasure.F;
+    AnyVec3 M = Main.EnvironmentModel.Plate2.CenterOfPressure.NetEffectMeasure.M;
+  };
+  
+  AnyOutputFile ForcePlate3_Global = 
+  {
+    FileName = "..\Output\ForcePlate3_Measured.txt";
+    SepSign = " ";
+    Header = 
+    {
+      TitleSectionOnOff = Off;
+      ConstSectionOnOff = Off;
+      VarSectionOnOff = Off;
+      ColumnNamesOnOff = On;
+      ConstSectionSaveOptionsOnOff = Off;
+    };
+    
+    AnyVec3 F = Main.EnvironmentModel.Plate3.CenterOfPressure.NetEffectMeasure.F;
+    AnyVec3 M = Main.EnvironmentModel.Plate3.CenterOfPressure.NetEffectMeasure.M;
+    
+  };  
+  
+};

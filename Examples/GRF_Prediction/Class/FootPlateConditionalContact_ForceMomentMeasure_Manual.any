@@ -1,0 +1,214 @@
+AnyFolder ForceMomentMeasure_Manual = 
+{
+  AnyRefFrame& ccBaseObj = .Contact0.BaseObject;
+  
+  AnyVec3 ccForce0_Global = .Contact0.Push.NormalForceVec + .Contact0.Push.FrictionForceVec;
+  AnyVec3 ccForce1_Global = .Contact1.Push.NormalForceVec + .Contact1.Push.FrictionForceVec;
+  AnyVec3 ccForce2_Global = .Contact2.Push.NormalForceVec + .Contact2.Push.FrictionForceVec;
+  AnyVec3 ccForce3_Global = .Contact3.Push.NormalForceVec + .Contact3.Push.FrictionForceVec;
+  AnyVec3 ccForce4_Global = .Contact4.Push.NormalForceVec + .Contact4.Push.FrictionForceVec;
+  AnyVec3 ccForce5_Global = .Contact5.Push.NormalForceVec + .Contact5.Push.FrictionForceVec;
+  AnyVec3 ccForce6_Global = .Contact6.Push.NormalForceVec + .Contact6.Push.FrictionForceVec;
+  AnyVec3 ccForce7_Global = .Contact7.Push.NormalForceVec + .Contact7.Push.FrictionForceVec;
+  AnyVec3 ccForce8_Global = .Contact8.Push.NormalForceVec + .Contact8.Push.FrictionForceVec;
+  AnyVec3 ccForce9_Global = .Contact9.Push.NormalForceVec + .Contact9.Push.FrictionForceVec;
+  AnyVec3 ccForce10_Global = .Contact10.Push.NormalForceVec + .Contact10.Push.FrictionForceVec;
+  AnyVec3 ccForce11_Global = .Contact11.Push.NormalForceVec + .Contact11.Push.FrictionForceVec;
+  AnyVec3 ccForce12_Global = .Contact12.Push.NormalForceVec + .Contact12.Push.FrictionForceVec;
+  AnyVec3 ccForce13_Global = .Contact13.Push.NormalForceVec + .Contact13.Push.FrictionForceVec;
+  AnyVec3 ccForce14_Global = .Contact14.Push.NormalForceVec + .Contact14.Push.FrictionForceVec;
+  AnyVec3 ccForce15_Global = .Contact15.Push.NormalForceVec + .Contact15.Push.FrictionForceVec;
+  AnyVec3 ccForce16_Global = .Contact16.Push.NormalForceVec + .Contact16.Push.FrictionForceVec;
+  AnyVec3 ccForce17_Global = .Contact17.Push.NormalForceVec + .Contact17.Push.FrictionForceVec;
+  AnyVec3 ccForce18_Global = .Contact18.Push.NormalForceVec + .Contact18.Push.FrictionForceVec;
+  AnyVec3 ccForce19_Global = .Contact19.Push.NormalForceVec + .Contact19.Push.FrictionForceVec;
+  AnyVec3 ccForce20_Global = .Contact20.Push.NormalForceVec + .Contact20.Push.FrictionForceVec;
+  AnyVec3 ccForce21_Global = .Contact21.Push.NormalForceVec + .Contact21.Push.FrictionForceVec;
+  AnyVec3 ccForce22_Global = .Contact22.Push.NormalForceVec + .Contact22.Push.FrictionForceVec;
+  AnyVec3 ccForce23_Global = .Contact23.Push.NormalForceVec + .Contact23.Push.FrictionForceVec;
+  AnyVec3 ccForce24_Global = .Contact24.Push.NormalForceVec + .Contact24.Push.FrictionForceVec;
+  AnyVec3 ccForce25_Global = .Contact25.Push.NormalForceVec + .Contact25.Push.FrictionForceVec;
+  
+  AnyVec3 ccForce0_Local= ccForce0_Global * ccBaseObj.Axes ;
+  AnyVec3 ccForce1_Local= ccForce1_Global * ccBaseObj.Axes ;
+  AnyVec3 ccForce2_Local = ccForce2_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce3_Local = ccForce3_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce4_Local = ccForce4_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce5_Local = ccForce5_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce6_Local = ccForce6_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce7_Local = ccForce7_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce8_Local = ccForce8_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce9_Local = ccForce9_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce10_Local = ccForce10_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce11_Local = ccForce11_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce12_Local = ccForce12_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce13_Local = ccForce13_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce14_Local = ccForce14_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce15_Local = ccForce15_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce16_Local = ccForce16_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce17_Local = ccForce17_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce18_Local = ccForce18_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce19_Local = ccForce19_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce20_Local = ccForce20_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce21_Local = ccForce21_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce22_Local = ccForce22_Global * ccBaseObj.Axes; 
+  AnyVec3 ccForce23_Local = ccForce23_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce24_Local = ccForce24_Global * ccBaseObj.Axes;
+  AnyVec3 ccForce25_Local = ccForce25_Global * ccBaseObj.Axes;
+  
+  AnyVec3 ccMomentArm0_Global = .Contact0.TargetObject.r ;  
+  AnyVec3 ccMomentArm1_Global = .Contact1.TargetObject.r ;
+  AnyVec3 ccMomentArm2_Global = .Contact2.TargetObject.r ;
+  AnyVec3 ccMomentArm3_Global = .Contact3.TargetObject.r ;
+  AnyVec3 ccMomentArm4_Global = .Contact4.TargetObject.r ;
+  AnyVec3 ccMomentArm5_Global = .Contact5.TargetObject.r ;
+  AnyVec3 ccMomentArm6_Global = .Contact6.TargetObject.r ;
+  AnyVec3 ccMomentArm7_Global = .Contact7.TargetObject.r ;
+  AnyVec3 ccMomentArm8_Global = .Contact8.TargetObject.r ;
+  AnyVec3 ccMomentArm9_Global = .Contact9.TargetObject.r ;
+  AnyVec3 ccMomentArm10_Global = .Contact10.TargetObject.r ;
+  AnyVec3 ccMomentArm11_Global = .Contact11.TargetObject.r ;
+  AnyVec3 ccMomentArm12_Global = .Contact12.TargetObject.r ;
+  AnyVec3 ccMomentArm13_Global = .Contact13.TargetObject.r ;
+  AnyVec3 ccMomentArm14_Global = .Contact14.TargetObject.r ;
+  AnyVec3 ccMomentArm15_Global = .Contact15.TargetObject.r ;
+  AnyVec3 ccMomentArm16_Global = .Contact16.TargetObject.r ;
+  AnyVec3 ccMomentArm17_Global = .Contact17.TargetObject.r ;
+  AnyVec3 ccMomentArm18_Global = .Contact18.TargetObject.r ;
+  AnyVec3 ccMomentArm19_Global = .Contact19.TargetObject.r ;
+  AnyVec3 ccMomentArm20_Global = .Contact20.TargetObject.r ;
+  AnyVec3 ccMomentArm21_Global = .Contact21.TargetObject.r ;
+  AnyVec3 ccMomentArm22_Global = .Contact22.TargetObject.r ;
+  AnyVec3 ccMomentArm23_Global = .Contact23.TargetObject.r ;
+  AnyVec3 ccMomentArm24_Global = .Contact24.TargetObject.r ;
+  AnyVec3 ccMomentArm25_Global = .Contact25.TargetObject.r ;
+  
+  AnyVec3 ccMomentArm0_Local = (ccMomentArm0_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm1_Local = (ccMomentArm1_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm2_Local = (ccMomentArm2_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm3_Local = (ccMomentArm3_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm4_Local = (ccMomentArm4_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm5_Local = (ccMomentArm5_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm6_Local = (ccMomentArm6_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm7_Local = (ccMomentArm7_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm8_Local = (ccMomentArm8_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm9_Local = (ccMomentArm9_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm10_Local = (ccMomentArm10_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm11_Local = (ccMomentArm11_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm12_Local = (ccMomentArm12_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm13_Local = (ccMomentArm13_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm14_Local = (ccMomentArm14_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm15_Local = (ccMomentArm15_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm16_Local = (ccMomentArm16_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm17_Local = (ccMomentArm17_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm18_Local = (ccMomentArm18_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm19_Local = (ccMomentArm19_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm20_Local = (ccMomentArm20_Global - ccBaseObj.r) * ccBaseObj.Axes;  
+  AnyVec3 ccMomentArm21_Local = (ccMomentArm21_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm22_Local = (ccMomentArm22_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm23_Local = (ccMomentArm23_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm24_Local = (ccMomentArm24_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  AnyVec3 ccMomentArm25_Local = (ccMomentArm25_Global - ccBaseObj.r) * ccBaseObj.Axes;
+  
+  AnyVec3 ccForceLocalSum = 
+  ccForce0_Local + 
+  ccForce1_Local + 
+  ccForce2_Local + 
+  ccForce3_Local + 
+  ccForce4_Local + 
+  ccForce5_Local +
+  ccForce6_Local + 
+  ccForce7_Local + 
+  ccForce8_Local + 
+  ccForce9_Local + 
+  ccForce10_Local +
+  ccForce11_Local +
+  ccForce12_Local +
+  ccForce13_Local + 
+  ccForce14_Local + 
+  ccForce15_Local +
+  ccForce16_Local + 
+  ccForce17_Local + 
+  ccForce18_Local + 
+  ccForce19_Local + 
+  ccForce20_Local +
+  ccForce21_Local +
+  ccForce22_Local +
+  ccForce23_Local + 
+  ccForce24_Local + 
+  ccForce25_Local 
+  ;
+  
+  AnyVec3 ccMomentLocalSum =
+//  cross(ccForce0_Local, ccMomentArm0_Local) + 
+//  cross(ccForce1_Local, ccMomentArm1_Local) + 
+//  cross(ccForce2_Local, ccMomentArm2_Local) + 
+//  cross(ccForce3_Local, ccMomentArm3_Local) +
+//  cross(ccForce4_Local, ccMomentArm4_Local) + 
+//  cross(ccForce5_Local, ccMomentArm5_Local) + 
+//  cross(ccForce6_Local, ccMomentArm6_Local) +
+//  cross(ccForce7_Local, ccMomentArm7_Local) + 
+//  cross(ccForce8_Local, ccMomentArm8_Local) + 
+//  cross(ccForce9_Local, ccMomentArm9_Local) +
+//  cross(ccForce10_Local, ccMomentArm10_Local) + 
+//  cross(ccForce11_Local, ccMomentArm11_Local) + 
+//  cross(ccForce12_Local, ccMomentArm12_Local) +
+//  cross(ccForce13_Local, ccMomentArm13_Local) +
+//  cross(ccForce14_Local, ccMomentArm14_Local) + 
+//  cross(ccForce15_Local, ccMomentArm15_Local) + 
+//  cross(ccForce16_Local, ccMomentArm16_Local) +
+//  cross(ccForce17_Local, ccMomentArm17_Local) + 
+//  cross(ccForce18_Local, ccMomentArm18_Local) + 
+//  cross(ccForce19_Local, ccMomentArm19_Local) +
+//  cross(ccForce20_Local, ccMomentArm20_Local) + 
+//  cross(ccForce21_Local, ccMomentArm21_Local) + 
+//  cross(ccForce22_Local, ccMomentArm22_Local) +
+//  cross(ccForce23_Local, ccMomentArm23_Local) +
+//  cross(ccForce24_Local, ccMomentArm24_Local) + 
+//  cross(ccForce25_Local, ccMomentArm25_Local)
+  
+  cross(ccMomentArm0_Local, ccForce0_Local) + 
+  cross(ccMomentArm1_Local, ccForce1_Local) + 
+  cross(ccMomentArm2_Local, ccForce2_Local) + 
+  cross(ccMomentArm3_Local, ccForce3_Local) +
+  cross(ccMomentArm4_Local, ccForce4_Local) + 
+  cross(ccMomentArm5_Local, ccForce5_Local) + 
+  cross(ccMomentArm6_Local, ccForce6_Local) +
+  cross(ccMomentArm7_Local, ccForce7_Local) + 
+  cross(ccMomentArm8_Local, ccForce8_Local) + 
+  cross(ccMomentArm9_Local, ccForce9_Local) +
+  cross(ccMomentArm10_Local, ccForce10_Local) + 
+  cross(ccMomentArm11_Local, ccForce11_Local) + 
+  cross(ccMomentArm12_Local, ccForce12_Local) +
+  cross(ccMomentArm13_Local, ccForce13_Local) +
+  cross(ccMomentArm14_Local, ccForce14_Local) + 
+  cross(ccMomentArm15_Local, ccForce15_Local) + 
+  cross(ccMomentArm16_Local, ccForce16_Local) +
+  cross(ccMomentArm17_Local, ccForce17_Local) + 
+  cross(ccMomentArm18_Local, ccForce18_Local) + 
+  cross(ccMomentArm19_Local, ccForce19_Local) +
+  cross(ccMomentArm20_Local, ccForce20_Local) + 
+  cross(ccMomentArm21_Local, ccForce21_Local) + 
+  cross(ccMomentArm22_Local, ccForce22_Local) +
+  cross(ccMomentArm23_Local, ccForce23_Local) +
+  cross(ccMomentArm24_Local, ccForce24_Local) + 
+  cross(ccMomentArm25_Local, ccForce25_Local)  
+  ;
+  
+  AnyVar Fx_On_Human = ccForceLocalSum[0]; 
+  AnyVar Fy_On_Human = ccForceLocalSum[1]; 
+  AnyVar Fz_On_Human = ccForceLocalSum[2];
+  AnyVar Mx_On_Human = ccMomentLocalSum[0]; 
+  AnyVar My_On_Human = ccMomentLocalSum[1]; 
+  AnyVar Mz_On_Human = ccMomentLocalSum[2];   
+  
+  AnyVar Fx_On_Plate = -Fx_On_Human;
+  AnyVar Fy_On_Plate = -Fy_On_Human;
+  AnyVar Fz_On_Plate = -Fz_On_Human;
+  AnyVar Mx_On_Plate = -Mx_On_Human;
+  AnyVar My_On_Plate = -My_On_Human;
+  AnyVar Mz_On_Plate = -Mz_On_Human;
+};
+
+
+
