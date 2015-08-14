@@ -2,6 +2,7 @@
 AnyFolder EnvironmentModel = {
   
   AnyFixedRefFrame GlobalRef ={
+    AnyVec3 r = Origin;
     Origin={0,0,0};
     AnyDrawRefFrame drw={ScaleXYZ=0.2*{1,1,1};};
   };  
