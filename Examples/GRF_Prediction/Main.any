@@ -1,6 +1,9 @@
 //-->classes
 #include "Class\ConditionalContactDistanceAndVelocityDepClass.any"
+
 #include "Class\FootPlateConditionalContact.any"
+#include "Class\FootPlateConditionalContact2.any"
+#include "Class\CreateFootNodes.any"
 //<--
 
 //-->defines
@@ -22,13 +25,13 @@
 
 //-->Additional
 Main =
-{
+{  
+   
+  
   #ifdef USE_GRF_PREDICTION
-   #include "HumanReferences.any"  
    EnvironmentModel = 
    {
-     #include "GRF_Plates.any"
-     #include "ConditionalContacts.any"
+     #include "ConditionalContacts2.any"
    };
   #endif
   
@@ -40,6 +43,4 @@ Main =
   
 };
 //<--
-
-
 
