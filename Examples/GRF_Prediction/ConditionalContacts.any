@@ -11,6 +11,7 @@
     {
       LimitDistLow = -0.10; 
       LimitDistHigh = 0.04;
+      Strength = 0.4*Main.HumanModel.BodyModel.TotalBodyMass*vnorm(Main.Studies.InverseDynamicStudy.Gravity);
     };
     
     CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot) = {  };
@@ -27,6 +28,7 @@
     {
       LimitDistLow = -0.10; 
       LimitDistHigh = 0.04;
+      Strength = 0.4*Main.HumanModel.BodyModel.TotalBodyMass*vnorm(Main.Studies.InverseDynamicStudy.Gravity);
     };
     
     CreateFootContactNodes25 FootNodes(foot_ref = Main.HumanModel.BodyModel.Left.Leg.Seg.Foot) = {  };

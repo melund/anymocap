@@ -6,15 +6,15 @@
     
     AnyFolder &DrawRef=Main.DrawSettings; //reference to the folder which contains drawsettings
     //low limit for the strength measure function, if the distance measured along Direction[0] is below this val. the strength will be zero (negative)
-    #var AnyVar UserDefinedDistLimitLow = .Settings.LimitDistLow ; 
+    #var AnyVar UserDefinedDistLimitLow; 
     //high limit for the strength measure function, if the distance measured along Direction[0] is above this val. the strength will be zero
-    #var AnyVar UserDefinedDistLimitHigh = .Settings.LimitDistHigh; 
+    #var AnyVar UserDefinedDistLimitHigh ; 
 
     //high limit for the strength measure function, if the radius measured along the plane with Direction[0] as normal is above this val. the strength will be zero
-    #var AnyVar UserDefinedRadiusLimit = .Settings.Radius;
+    #var AnyVar UserDefinedRadiusLimit;
 
     //high limit for the strength measure function, if the velocity measured is above this val. the strength will be zero
-    #var AnyVar UserDefinedVelLimitHigh = .Settings.LimitVelHigh; 
+    #var AnyVar UserDefinedVelLimitHigh; 
     
     
     #if (DisplayTriggerVolume)
@@ -48,8 +48,8 @@
     };
     #endif
     
-    #var AnyVar Strength = .Settings.Strength ;  //strength of muscles
-    #var AnyVar StaticFrictionCoefficient = .Settings.FrictionCoefficient; //Friction coefficient
+    #var AnyVar Strength;  //strength of muscles
+    #var AnyVar StaticFrictionCoefficient; //Friction coefficient
     #var AnyVar ScaleFactor =1; //scale factor for draw vectors it can be set differently than by the drawsettings
     
     #var AnyInt NormalDirection = Z;

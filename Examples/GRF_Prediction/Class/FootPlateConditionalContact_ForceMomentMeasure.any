@@ -1,10 +1,10 @@
 AnyForceMomentMeasure ForceMomentMeasure_Auto = 
 {
-  IncludeForces = arrcat( 
-     ObjSearch(".Contact*.Push.Direction0Muscle.NormalDirectionMuscle" ),
-     ObjSearch(".Contact*.Push.Direction0*Muscle.*.FrictionMuscle" )
-     );
-  
+//  IncludeForces = arrcat( 
+//     ObjSearch(".Contacts.*.Push.Direction0Muscle.NormalDirectionMuscle" ),
+//     ObjSearch(".Contacts.*.Push.Direction0*Muscle.*.FrictionMuscle" )
+//     );
+  IncludeForces = ObjSearchRecursive(".Contacts","*", "AnyForceBase");
   
   AnyRefFrame& base = .PlateBaseFrame ;
   
