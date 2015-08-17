@@ -2,7 +2,6 @@
 #include "Class\ConditionalContactDistanceAndVelocityDepClass.any"
 
 #include "Class\FootPlateConditionalContact.any"
-#include "Class\FootPlateConditionalContact2.any"
 #include "Class\CreateFootNodes.any"
 //<--
 
@@ -26,14 +25,16 @@
 //-->Additional
 Main =
 {  
-   
+   Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics.KinematicTol=1e-4;
   
   #ifdef USE_GRF_PREDICTION
    EnvironmentModel = 
    {
-     #include "ConditionalContacts2.any"
+     #include "ConditionalContacts.any"
    };
   #endif
+  
+  
   
   Studies.InverseDynamicStudy.ModelEnvironmentConnection = 
   {
