@@ -1,7 +1,5 @@
 ////**************************** CONDITIONAL CONTACTS ****************************//// 
-AnyFolder ConditionalContacts2 = 
-{
-  
+ 
   FootPlateConditionalContact GRF_Prediction_Right(
     NORMAL_DIRECTION = "Y",
     NUMBER_OF_NODES = 25,
@@ -36,10 +34,6 @@ AnyFolder ConditionalContacts2 =
     // CreateFootContactNodes200 ContactNodes(foot_ref = Main.HumanModel.BodyModel.Right.Leg.Seg.Foot) = {  };
   };
   
-
-};
-
-
 
 
 

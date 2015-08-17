@@ -1,5 +1,3 @@
-#ifndef EXCLUDE_FORCE_PLATES
-
 ForcePlateType4AutoDetection Plate1 (
 PlateName = Plate1,
 Folder =Main.ModelSetup.C3DFileData,
@@ -62,6 +60,3 @@ FootPresent=1)
   Cal = Main.ModelSetup.C3DFileData.Groups.FORCE_PLATFORM.CAL_MATRIX.Data[2];
   Switch_DrawForceVectorFromCOP = On;
 };    
-
-#endif
-

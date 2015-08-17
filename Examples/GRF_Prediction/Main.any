@@ -1,15 +1,11 @@
+#define USE_GRF_PREDICTION
+
+
 //-->classes
 #include "Class\ConditionalContactDistanceAndVelocityDepClass.any"
 
 #include "Class\FootPlateConditionalContact.any"
 #include "Class\CreateFootNodes.any"
-//<--
-
-//-->defines
-#define USE_GRF_PREDICTION
-#ifdef USE_GRF_PREDICTION
-  #define EXCLUDE_FORCE_PLATES
-#endif
 //<--
 
 //-->paths
@@ -18,30 +14,18 @@
 #path MOCAP_LAB_SPECIFIC_DATA "LabSpecificData.any"
 //<--
 
-//-->AnyMocap
-#include "LoadAnyMocap.any"
-//<--
+#ifdef USE_GRF_PREDICTION
+ #define MOCAP_RESIDUALS "WeakGeneralMuscles" 
+ #path MOCAP_FORCE_PLATE_FILE "ConditionalContacts.any"
+#else
+ #define MOCAP_RESIDUALS "ReacForce" 
+ #path MOCAP_FORCE_PLATE_FILE "ForcePlates.any"
+#endif
 
-//-->Additional
-Main =
-{  
-   Main.Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics.KinematicTol=1e-4;
-  
-  #ifdef USE_GRF_PREDICTION
-   EnvironmentModel = 
-   {
-     #include "ConditionalContacts.any"
-   };
-  #endif
-  
-  
-  
-  Studies.InverseDynamicStudy.ModelEnvironmentConnection = 
-  {
-    #include "PelvisResiduals.any"
-  };
-  
-  
+Main = {
+Studies.ParameterIdentification.KinematicStudyForParameterIdentification.Kinematics.KinematicTol=1e-4;
 };
-//<--
+
+#include "LoadAnyMocap.any"
+
 
