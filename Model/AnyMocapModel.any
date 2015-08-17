@@ -60,6 +60,7 @@ Main = {
       AnyFolder &EnvironmentModel = Main.EnvironmentModel;
       AnyFolder ModelEnvironmentConnection ={
         #include "JointsAndDriversOptimized.any"
+        #include "Residuals.any"
       }; 
       
       // Include markers but exclude the driver part (for visualization)

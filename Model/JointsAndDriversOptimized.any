@@ -3,7 +3,7 @@ AnyFolder JointsAndDrivers = {
 #ifndef FORCE_MODEL_LOAD_WHEN_DATA_FILES_ARE_MISSING
   // Macro for initializing a empty mxn matrix
   #define _ZEROS(m,n) 0.0*farr( 0.0, 1.0, m)'*{farr( 0.0, 1.0, n)}
-
+  
   AnyKinDriver JntDriverTrunk = {
     AnyFunInterpol InterpolatedData = {
       AnyInputFile FileReader = {
@@ -34,7 +34,7 @@ AnyFolder JointsAndDrivers = {
     AnyKinMeasureOrg &PelvisThoraxRotation = ...BodyModel.Interface.Trunk.PelvisThoraxRotation;
     #if BM_TRUNK == ON & BM_TRUNK_NECK == OFF
     AnyKinMeasureOrg &NeckExtension = ...BodyModel.Interface.Trunk.NeckJoint;
-    Reaction.Type={Off,Off,Off,Off,Off,Off,Off,Off,Off,Off};
+    Reaction.Type= {Off,Off,Off,Off,Off,Off,Off,Off,Off,Off};
     #endif 
     #if BM_TRUNK_NECK == ON
     AnyKinMeasureOrg& SkullThoraxFlexion = ...BodyModel.Interface.Trunk.SkullThoraxFlexion;

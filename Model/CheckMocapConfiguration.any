@@ -38,3 +38,8 @@ Main.ModelSetup.TrialSpecificData.TrialFileName = "C3D_ExampleFile";
 #ifndef MOCAP_C3DSETTINGS 
 #path  MOCAP_C3DSETTINGS  "C3DSettings.any"
 #endif
+
+
+#ifndef MOCAP_RESIDUALS
+#define MOCAP_RESIDUALS "ReacForce"
+#endif
