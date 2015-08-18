@@ -18,7 +18,6 @@
  #define MOCAP_RESIDUALS "WeakGeneralMuscles" 
  #path MOCAP_FORCE_PLATE_FILE "ConditionalContacts.any"
 #else
- #define MOCAP_RESIDUALS "ReacForce" 
  #path MOCAP_FORCE_PLATE_FILE "ForcePlates.any"
 #endif
 
